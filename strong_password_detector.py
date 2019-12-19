@@ -3,7 +3,7 @@
 # ONE uppercase and ONE numerical value.
 import re
 
-print("Password needs to be at least 8-15 characters long with at least one uppercase, one lower case,\nand one numerical value to be secure")
+print("Password needs to be at least eight characters long with at least one uppercase, one lower case,\nand one numerical value to be secure")
 
 def detector():
     while True:
