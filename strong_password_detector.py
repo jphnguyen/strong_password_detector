@@ -2,7 +2,7 @@
 # strong_password_detector.py - Will make sure password is eight characters long with at least ONE lowercase,
 # ONE uppercase and ONE numerical value.
 import re
-
+print("Password needs to be at least 8-15 characters long with at least one uppercase, one lower case,\nand one numerical value to be secure")
 def detector():
     while True:
         password = input("Please enter password you wish to use here: ")
@@ -12,16 +12,16 @@ def detector():
         number_regex    = re.compile(r"[0-9]")
 
         if character_regex.search(password) == None:
-            print("Password needs to be at least 8-15 characters long with at least one uppercase, one lower case, and one numerical value")
+            print("Password needs to be at least 8-15 characters long.")
             continue
         elif lowercase_regex.search(password) == None:
-            print("Password needs to be at least 8-15 characters long with at least one uppercase, one lower case, and one numerical value")
+            print("Password needs at least one lowercase character.")
             continue
         elif uppercase_regex.search(password) == None:
-            print("Password needs to be at least 8-15 characters long with at least one uppercase, one lower case, and one numerical value")
+            print("Password needs at least one uppercase character.")
             continue
         elif number_regex.search(password) == None:
-            print("Password needs to be at least 8-15 characters long with at least one uppercase, one lower case, and one numerical value")
+            print("Password needs at least one numerical value.")
             continue
         else:
             print("Password is very secure.")
